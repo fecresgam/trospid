@@ -13,25 +13,14 @@ import cucumber.api.java.en.When;
 
 public class StepDefsIntegrationTest extends SpringIntegrationTest {
 
-//    @When("^the client calls /baeldung$")
-//    public void the_client_issues_POST_hello() throws Throwable {
-//        executePost();
-//    }
-
-
-    @And("^the client receives server version (.+)$")
-    public void the_client_receives_server_version_body(String version) throws Throwable {
+    @And("^the client receives the response (.+)$")
+    public void the_client_receives_the_response_body(String version) throws Throwable {
         assertThat(latestResponse.getBody(), is(version));
     }
 
-
-
-
-
-
-    @Given("^the client calls /thisURLnotExists$")
-    public void the_client_issues_GET_thisURLnotExists() throws Throwable {
-        executeGet("http://localhost:8080/thisURLnotExists");
+    @Given("^the client calls /greting$")
+    public void the_client_issues_GET_greting() throws Throwable {
+        executeGet("http://localhost:8080/greting");
     }
 
     @Given("^the client calls /greeting$")

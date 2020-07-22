@@ -15,11 +15,4 @@ public class GreetingController {
         return new Greeting(counter.incrementAndGet(), String.format(template, name));
     }
 
-
-
-    //TODO: Added for cucumber. Refactor it
-    @RequestMapping(method = { RequestMethod.GET }, value = { "/version" })
-    public String getVersion() {
-        return "1.0";
-    }
 }
