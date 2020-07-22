@@ -13,21 +13,10 @@ import cucumber.api.java.en.When;
 
 public class StepDefsIntegrationTest extends SpringIntegrationTest {
 
-    @When("^the client calls /baeldung$")
-    public void the_client_issues_POST_hello() throws Throwable {
-        executePost();
-    }
-
-    @Given("^the client calls /hello$")
-    public void the_client_issues_GET_hello() throws Throwable {
-        executeGet("http://localhost:8080/hello");
-    }
-
-    @When("^the client calls /version$")
-    public void the_client_issues_GET_version() throws Throwable {
-        executeGet("http://localhost:8080/version");
-    }
-
+//    @When("^the client calls /baeldung$")
+//    public void the_client_issues_POST_hello() throws Throwable {
+//        executePost();
+//    }
 
 
     @And("^the client receives server version (.+)$")

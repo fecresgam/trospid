@@ -39,28 +39,28 @@ public class SpringIntegrationTest {
         });
     }
 
-    void executePost() throws IOException {
-        final Map<String, String> headers = new HashMap<>();
-        headers.put("Accept", "application/json");
-        final HeaderSettingRequestCallback requestCallback = new HeaderSettingRequestCallback(headers);
-        final ResponseResultErrorHandler errorHandler = new ResponseResultErrorHandler();
-
-        if (restTemplate == null) {
-            restTemplate = new RestTemplate();
-        }
-
-        restTemplate.setErrorHandler(errorHandler);
-
-        //TODO check this
-        latestResponse = restTemplate
-                .execute("http://localhost:8082/baeldung", HttpMethod.POST, requestCallback, response -> {
-                    if (errorHandler.hadError) {
-                        return (errorHandler.getResults());
-                    } else {
-                        return (new ResponseResults(response));
-                    }
-                });
-    }
+//    void executePost() throws IOException {
+//        final Map<String, String> headers = new HashMap<>();
+//        headers.put("Accept", "application/json");
+//        final HeaderSettingRequestCallback requestCallback = new HeaderSettingRequestCallback(headers);
+//        final ResponseResultErrorHandler errorHandler = new ResponseResultErrorHandler();
+//
+//        if (restTemplate == null) {
+//            restTemplate = new RestTemplate();
+//        }
+//
+//        restTemplate.setErrorHandler(errorHandler);
+//
+//        //TODO check this
+//        latestResponse = restTemplate
+//                .execute("http://localhost:8082/baeldung", HttpMethod.POST, requestCallback, response -> {
+//                    if (errorHandler.hadError) {
+//                        return (errorHandler.getResults());
+//                    } else {
+//                        return (new ResponseResults(response));
+//                    }
+//                });
+//    }
 
     private class ResponseResultErrorHandler implements ResponseErrorHandler {
         private ResponseResults results = null;
