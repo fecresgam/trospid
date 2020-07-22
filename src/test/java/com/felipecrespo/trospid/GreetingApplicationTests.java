@@ -52,6 +52,20 @@ public class GreetingApplicationTests {
 		getName(VALID_ENDPOINT, inputParameterValue, expectedValue);
 	}
 
+	@Test
+	public void paramGreetingShouldReturnOtherTailoredMessage() throws Exception {
+
+		// arrange
+		String inputParameterValue = "coolguy";
+		String expectedValue = "Hello, " + inputParameterValue + "!";
+
+		// act
+
+		// assert
+		getName(VALID_ENDPOINT, inputParameterValue, expectedValue);
+	}
+
+
 	private ResultActions getName(String urlTemplate, String inputParameter, String expectedValue) throws Exception {
 		return this.mockMvc.perform(get(urlTemplate).param("name", inputParameter))
 				.andDo(print()).andExpect(status().isOk())
