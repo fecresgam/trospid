@@ -45,6 +45,16 @@ public class StepDefsIntegrationTest extends SpringIntegrationTest {
         executeGet("http://localhost:8080/thisURLnotExists");
     }
 
+    @Given("^the client calls /greeting$")
+    public void the_client_issues_GET_greeting() throws Throwable {
+        executeGet("http://localhost:8080/greeting");
+    }
+
+    @Given("^the client calls /greeting\\?name=CoolGuy$")
+    public void the_client_issues_GET_greetingCoolGuy() throws Throwable {
+        executeGet("http://localhost:8080/greeting?name=CoolGuy");
+    }
+
     @Then("^the client receives status code of (\\d+)$")
     public void the_client_receives_status_code_of(int statusCode) throws Throwable {
         final HttpStatus currentStatusCode = latestResponse.getTheResponse().getStatusCode();
