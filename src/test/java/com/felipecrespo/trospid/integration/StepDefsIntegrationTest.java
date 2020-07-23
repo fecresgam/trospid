@@ -1,4 +1,4 @@
-package com.felipecrespo.trospid.cucumber;
+package com.felipecrespo.trospid.integration;
 
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -9,7 +9,6 @@ import org.springframework.http.HttpStatus;
 
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Then;
-import cucumber.api.java.en.When;
 
 public class StepDefsIntegrationTest extends SpringIntegrationTest {
 
@@ -20,17 +19,17 @@ public class StepDefsIntegrationTest extends SpringIntegrationTest {
 
     @Given("^the client calls /greting$")
     public void the_client_issues_GET_greting() throws Throwable {
-        executeGet("http://localhost:8080/greting");
+        executeGet("http://localhost:8082/greting");
     }
 
     @Given("^the client calls /greeting$")
     public void the_client_issues_GET_greeting() throws Throwable {
-        executeGet("http://localhost:8080/greeting");
+        executeGet("http://localhost:8082/greeting");
     }
 
     @Given("^the client calls /greeting\\?name=CoolGuy$")
     public void the_client_issues_GET_greetingCoolGuy() throws Throwable {
-        executeGet("http://localhost:8080/greeting?name=CoolGuy");
+        executeGet("http://localhost:8082/greeting?name=CoolGuy");
     }
 
     @Then("^the client receives status code of (\\d+)$")

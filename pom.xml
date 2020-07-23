@@ -30,12 +30,15 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
 			<scope>test</scope>
-			<exclusions>
-				<exclusion>
-					<groupId>org.junit.vintage</groupId>
-					<artifactId>junit-vintage-engine</artifactId>
-				</exclusion>
-			</exclusions>
+<!--			Junit Vintage is needed in order to ejecute cucumber on mvn command line-->
+<!--			<exclusions>-->
+<!--				<exclusion>-->
+<!--					<groupId>org.junit.vintage</groupId>-->
+<!--					<artifactId>junit-vintage-engine</artifactId>-->
+<!--				</exclusion>-->
+<!--			</exclusions>-->
+
+
 		</dependency>
 
 		<dependency>
@@ -76,6 +79,21 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
+
+
+<!--			<plugin>-->
+<!--				<groupId>org.apache.maven.plugins</groupId>-->
+<!--				<artifactId>maven-surefire-plugin</artifactId>-->
+<!--				<version>2.22.1</version>-->
+<!--				<configuration>-->
+<!--					<includes>-->
+<!--						<include>**/*Cucumber*</include>-->
+<!--						&lt;!&ndash;include>**/Greeting*</include&ndash;&gt;-->
+<!--					</includes>-->
+<!--				</configuration>-->
+<!--			</plugin>-->
+
+
 		</plugins>
 	</build>
 

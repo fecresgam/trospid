@@ -1,4 +1,4 @@
-package com.felipecrespo.trospid.cucumber;
+package com.felipecrespo.trospid.integration;
 
 
 import com.felipecrespo.trospid.TrospidApplication;

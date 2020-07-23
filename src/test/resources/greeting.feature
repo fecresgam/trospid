@@ -9,4 +9,4 @@ Feature: the greeting works
   Scenario: client makes call to get /greeting CoolGuy
     When the client calls /greeting?name=CoolGuy
     Then the client receives status code of 200
-    And the client receives the response {"id":2,"content":"Hello, CoolGuy!"}
+    And the client receives the response {"id":2,"content":"Hello, CoolGuyn!"}

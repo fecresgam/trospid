@@ -16,7 +16,7 @@ import org.springframework.test.web.servlet.ResultActions;
 
 @SpringBootTest
 @AutoConfigureMockMvc
-public class GreetingApplicationTests {
+public class GreetingApplicationTest {
 
 	public static final String VALID_ENDPOINT = "/greeting";
 	@Autowired
