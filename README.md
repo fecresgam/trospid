@@ -8,7 +8,12 @@ Trospid Initiative
  [http://localhost:8082/greeting?name=User](http://localhost:8082/greeting?name=User)
  
  Tests
- _____
+ -----
  - Unit tests runs on _test_ phase
  - Cucumber Integration test runs on _verify_ phase
    - They can be executed with mvn -Dtest=CucumberIntegrationTest test
+
+Docker
+------
+- Build docker build -t felipecrespo/trospid-docker .
+- exec docker run -dp 8082:8082 felipecrespo/trospid-docker
