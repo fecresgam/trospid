@@ -15,5 +15,5 @@ Trospid Initiative
 
 Docker
 ------
-- Build docker build -t felipecrespo/trospid-docker .
-- exec docker run -dp 8082:8082 felipecrespo/trospid-docker
+- Build: docker build -t felipecrespo/trospid-docker .
+- Execute: docker run -dp 8082:8082 felipecrespo/trospid-docker
