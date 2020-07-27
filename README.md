@@ -15,5 +15,7 @@ Trospid Initiative
 
 Docker
 ------
+- Based on https://spring.io/guides/gs/spring-boot-docker/
 - Build: docker build -t felipecrespo/trospid-docker .
 - Execute: docker run -dp 8082:8082 felipecrespo/trospid-docker
+- docker ps
